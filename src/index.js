@@ -4,7 +4,7 @@ function isObject(value) {
   return typeof value !== 'undefined' && value !== null && value.constructor === Object
 }
 
-export default function concatenateReducers(reducers) {
+export function concatenateReducers(reducers) {
   const empty = reducers.length == 0
   function applyNextState(previousState, nextState) {
     if (isObject(previousState) && isObject(nextState)) {
